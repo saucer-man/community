@@ -1,7 +1,10 @@
-package com.saucerman.community.model;
+package com.saucerman.community.dto;
+
+import com.saucerman.community.model.User;
 import lombok.Data;
+
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id; // id
     private String title; //标题
     private String description;  //描述
@@ -12,4 +15,7 @@ public class Question {
     private Integer viewCount; // 浏览数
     private Integer commentCount; // 评论数
     private Integer likeCount; // 点赞数
+
+    //和question不一样的地方，加一个user
+    private User user; //
 }
